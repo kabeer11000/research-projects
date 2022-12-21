@@ -5,20 +5,33 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "workflow:update": "npm run build && npm run export && npm run deploy",
+    "export": "next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "node ./deploy.js"
   },
   "dependencies": {
+    "@geist-ui/core": "^2.3.8",
+    "@geist-ui/icons": "^1.0.2",
+    "@geist-ui/prism": "^1.1.1",
+    "@geist-ui/react": "^2.2.5",
+    "@next/mdx": "^12.2.5",
+    "markdown-to-jsx": "^7.1.7",
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-markdown": "^8.0.3"
   },
   "devDependencies": {
     "@types/node": "18.7.6",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
+    "archiver": "^5.3.1",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
+    "form-data": "^4.0.0",
+    "node-fetch": "v2",
     "typescript": "4.7.4"
   }
 }
